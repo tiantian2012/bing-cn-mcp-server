@@ -58,6 +58,22 @@ npx bing-cn-mcp
   }
 }
 ```
+Windows用户的配置
+
+```json
+{
+  "mcpServers": {
+    "bingcnmcp": {
+        "command": "cmd",
+        "args": [
+          "/c",
+          "npx",
+          "bing-cn-mcp"
+      ]
+    }
+  }
+}
+```
 
 3. 现在你可以在 Claude 中使用 `mcp__bing_search` 和 `mcp__fetch_webpage` 工具了
 
