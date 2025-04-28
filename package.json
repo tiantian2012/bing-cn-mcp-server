@@ -1,24 +1,27 @@
 {
-  "name": "bing-cn-mcp-server",
-  "version": "1.0.0",
-  "description": "MCP 服务器，提供必应搜索结果抓取和网页内容抓取功能，支持中文搜索",
-  "main": "index.js",
+  "name": "bing-cn-mcp",
+  "version": "1.0.1",
+  "description": "MCP 服务器，提供中文必应搜索结果抓取和网页内容抓取功能，支持中文搜索",
+  "main": "build/index.js",
   "type": "module",
   "bin": {
-    "bing-mcp": "./build/index.js"
+    "bing-cn-mcp": "./build/index.js"
   },
   "scripts": {
     "build": "npx tsc",
-    "start": "node build/index.js"
+    "start": "node build/index.js",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "mcp",
     "bing",
     "search",
     "scraper",
-    "chinese"
+    "chinese",
+    "claude",
+    "cursor"
   ],
-  "author": "MCP工具开发者",
+  "author": "slcatwujian",
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.10.2",
@@ -32,6 +35,18 @@
     "typescript": "^5.3.3"
   },
   "files": [
-    "build"
-  ]
+    "build",
+    ".env.example"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yan5236/bing-cn-mcp-server"
+  },
+  "bugs": {
+    "url": "https://github.com/yan5236/bing-cn-mcp-server/issues"
+  },
+  "homepage": "https://github.com/yan5236/bing-cn-mcp-server#readme",
+  "engines": {
+    "node": ">=16.0.0"
+  }
 }
