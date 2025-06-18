@@ -58,6 +58,7 @@ npx bing-cn-mcp
   }
 }
 ```
+<<<<<<< HEAD
 
 3. 现在你可以在 Claude 中使用 `mcp__bing_search` 和 `mcp__fetch_webpage` 工具了
 
@@ -67,6 +68,33 @@ npx bing-cn-mcp
 
 搜索必应并获取结果列表。
 
+=======
+Windows用户的配置
+
+```json
+{
+  "mcpServers": {
+    "bingcnmcp": {
+        "command": "cmd",
+        "args": [
+          "/c",
+          "npx",
+          "bing-cn-mcp"
+      ]
+    }
+  }
+}
+```
+
+3. 现在你可以在 Claude 中使用 `mcp__bing_search` 和 `mcp__fetch_webpage` 工具了
+
+## 支持的工具
+
+### bing_search
+
+搜索必应并获取结果列表。
+
+>>>>>>> 14663e4aa834966240a7abfd4ddb2efe671c55db
 参数：
 - `query`: 搜索关键词
 - `num_results`: 返回结果数量（默认为 5）
