@@ -464,7 +464,11 @@ server.tool(
 // 运行服务器
 async function main() {
   try {
-    const transport = new StdioServerTransport();
+    // const transport = new StdioServerTransport();
+    import { SSEServerTransport } from "@modelcontextprotocol/sdk/server/sse.js";
+    const transport = new SSEServerTransport({
+      port: process.env.PORT ? parseInt(process.env.PORT) : 3000,
+    });
     await server.connect(transport);
     console.error("必应搜索 MCP 服务器已启动");
   } catch (error) {
